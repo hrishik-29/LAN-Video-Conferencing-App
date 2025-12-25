@@ -1,0 +1,34 @@
+# config.py
+
+import pyaudio
+import logging
+
+# --- Network Settings ---
+DEFAULT_SERVER_IP = '127.0.0.1'
+TCP_PORT = 50001
+VIDEO_UDP_PORT = 50002
+AUDIO_UDP_PORT = 50003
+BUFFER_SIZE = 65536
+
+# --- TCP Message Protocol ---
+TCP_MSG_HEADER_SIZE = 4
+USERNAME_HEADER_LENGTH = 16
+
+# --- Media Stream Settings ---
+VIDEO_RESOLUTION = (640, 480)
+VIDEO_QUALITY = 75
+SCREEN_SHARE_RESOLUTION = (1280, 720)
+SCREEN_SHARE_QUALITY = 60
+AUDIO_CHUNK = 512
+AUDIO_FORMAT = pyaudio.paInt16
+AUDIO_CHANNELS = 1
+AUDIO_RATE = 16000
+AUDIO_JITTER_MAX_CHUNKS = 8
+AUDIO_SILENCE_THRESHOLD = 450
+
+# --- GUI Settings ---
+USERS_PER_PAGE = 6
+
+# --- Logging ---
+# LOG_LEVEL = logging.INFO
+LOG_LEVEL = logging.DEBUG # Keep DEBUG for detailed logs

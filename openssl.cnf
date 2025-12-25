@@ -1,0 +1,10 @@
+# Minimal OpenSSL config for generating a self-signed certificate
+[ req ]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_ca
+
+[ req_distinguished_name ]
+# No prompts for values
+
+[ v3_ca ]
+basicConstraints = CA:FALSE
